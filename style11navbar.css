@@ -1,0 +1,183 @@
+:root{
+   /* haciendo una paleta de colores guardadas en variables */
+   --very-light-pink:#c7c7c7;
+   --text-input-field:#f7f7f7;
+   --hospital-green:#ACD982;
+   --white:#FFFFFF;
+   --black:#000000;
+   /* medidas guardadas en variables para el texto */
+   --sm:14px;
+   --md:14px;
+   --lg:14px;
+}
+body{
+   /* ajusta todos los margenes a 0 */ 
+   margin:0;
+   font-family:'Quicksand',sans-serif;
+}
+nav{
+   display:flex;
+   justify-content: space-between;
+   padding:0 24px;
+   border-bottom:1px solid var(--very-light-pink);
+   
+}
+.menu{
+   /* para ocultar hata proximo cambio */
+   display:none;
+}
+.logo{
+   width:100px;
+
+}
+.navbar-left ul ,
+.navbar-right ul{
+   /* para eliminar los puntos */
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   /* para activar todas las funciones de flex */
+   display: flex;
+   align-items: center;
+   height:60px;
+}
+.navbar-left{
+   display: flex;
+}
+.navbar-left{
+   margin-left:12px;
+}
+
+.navbar-left ul li a,
+.navbar-right ul li a{
+   text-decoration: none;
+   color: var(--very-light-pink);
+   border: 1px solid var(--white);
+   padding: 8px;
+}
+
+.navbar-left ul li a:hover ,
+.navbar-right ul li a:hover {
+   text-decoration: none;
+   color:var(--hospital-green);
+   border:1px solid var(--hospital-green);
+   border-radius: 8px;
+
+}
+.navbar-email{
+   color: var(--very-light-pink);
+   font-size:var(--sm);
+   margin-right: 12px;
+}
+.navbar-shopping-cart{
+   position:relative;
+}
+.navbar-shopping-cart div{
+   width:16px;
+   height:16px;
+   background-color: var(--hospital-green);
+   border-radius: 50%;
+   font-size:var(--sm);
+   font-weight: bold;
+   position:absolute;
+   top:-6px;
+   right:-3px;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* ################# desde aqui comienza el segundo  */
+.product-detail{
+   width:360px;
+   padding-bottom: 24px;
+   position: absolute;
+   right:0;
+
+}
+
+.product-detail-close{
+   background:var(--white);
+   width:14px;
+   height:14px;
+   position:absolute;
+   top:24px;
+   left:24px;  
+   z-index: index 2;
+   padding: 12px;
+   border-radius: 50%;
+
+}
+.product-detail-close:hover{
+   cursor:pointer;
+}
+.product-detail > img:nth-child(2){
+   width:100%;
+   height:360px;
+   /* para mejorar la imagen  */
+   object-fit:cover;
+   border-radius:0 0 20px 20px;
+}
+.product-info{
+   margin:24px 24px 0 24px;
+}
+.product-info p:nth-child(1){
+   font-weight:bold;
+   font-size:var(--md);
+   margin-bottom:24px;
+   margin-top: 0;
+
+}
+.product-info p:nth-child(2){
+   color: var(--very-light-pink);
+   font-size:var(--md);
+   margin-bottom:36px;
+   margin-top: 0;
+
+}
+.product-info p:nth-child(3){
+   color: var(--very-light-pink);
+   font-size:var(--sm);
+   margin-bottom:36px;
+   margin-top: 0;
+
+}
+.primary-buttom{
+   
+   background-color: var(--hospital-green);
+   border-radius: 8px;
+   /* para eliminar el borde de los elemento */
+   border: none;
+   /* color de las letras */
+   color:var(--white);
+   height: 50px;
+   width: 100%;
+   cursor: pointer;
+   font-size: var(--md);
+   font-weight: bold;
+   margin-bottom: 4px;
+}
+.add-to-cart-button{
+   display:flex;
+   align-items: center;
+   justify-content: center;
+}
+@media(max-width:640px){
+   .menu{
+      /* ---se muestra cuando el formato cambie a 640
+      --- desactiva a display none 
+      --- hace que se active todo el bloque por ende desactiva display none */
+      display:block;
+   }
+   .navbar-left ul {
+      /* ---desaparece navbar-lef 
+      --- especificar la etiqueta contenedora*/
+      display:none;
+   }
+   .navbar-email{
+      display:none;
+   }
+   .product-detail{
+      width:100%;
+   }
+}

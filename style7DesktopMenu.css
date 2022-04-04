@@ -1,0 +1,65 @@
+:root{
+   /* haciendo una paleta de colores guardadas en variables */
+   --very-light-pink:#c7c7c7;
+   --text-input-field:#f7f7f7;
+   --hospital-green:#ACD982;
+   --white:#FFFFFF;
+   --black:#000000;
+   /* medidas guardadas en variables para el texto */
+   --sm:14px;
+   --md:14px;
+   --lg:14px;
+}
+body{
+   /* ajusta todos los margenes a 0 */ 
+   margin:0;
+   font-family:'Quicksand',sans-serif;
+}
+.desktop-menu{
+   width:100px;
+   /* para que tome el tamnaño predetermindo de la pantalla */
+   height: auto;
+   border: 1px solid var(--very-light-pink);
+   border-radius: 6px;
+   padding: 20px 20px 0 20px;
+}
+.desktop-menu ul {
+   /* para eliminar los puntos de cada lista */
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+.desktop-menu ul li{
+   text-align: end;
+}
+/* para que lo hijos de li tanto el primero como el segundo hereden el bold */
+.desktop-menu ul li:nth-child(1),
+.desktop-menu ul li:nth-child(2){
+   font-weight: bold;
+}
+/* aplica al ultimo niño por asi decirlo */
+.desktop-menu ul li:last-child{
+   padding: 20px;
+   border-top: 1px solid var(--very-light-pink);
+}
+.desktop-menu ul li:last-child a{
+   color:var(--hospital-green);
+   font-size: var(--sm);
+}
+/* tener en cuenta que a los elementos inline no se le puede agregar margin */
+.desktop-menu ul li a{
+   color:var(--black);
+   /* para quitar las lineas de la listas */
+   text-decoration:none;
+   margin-bottom: 20px;
+   /* que se menatenga con lo elementos inline pero que tenga caracteristicas de bloque para que pueda tomar el margin que le pasamos */
+   display:inline-block;
+}
+
+
+
+
+
+
+
+
